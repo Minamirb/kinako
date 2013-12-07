@@ -10,20 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :kidlemail %><br>
-    <%= f.text_field :kidlemail %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.email_field :email, :class => "form-control", :placeholder => "Email Adress", :autofoucus => true %>
+  <br>
+  <%= f.text_field :name, :class => "form-control", :placeholder => "Name", :autofocus => true %>
+  <br>  
+  <%= f.text_field :kidlemail, :class => "form-control", :placeholder => "kindlemail", :autofocus => true %>
+  <br>
+  <%= f.submit :type => "button", :class => "btn btn-primary btn-xs" %>    
 <% end %>
