@@ -1,10 +1,20 @@
-<h1>Books#new</h1>
-<%= form_tag( books_path ) do %>
-    <div id="url">
-      <%= label_tag(:target_url, "target_url") %>
-      <div>
-        <%= text_field_tag(:target_url, "", :placeholder =>"http://~") %>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3>Kindleで読みたいページはどこですか？</h3>
+  </div>
+
+  <div class="panel-body">
+    <%= form_tag( books_path ) do %>
+      <div id="url">
+        <h4>ここにURLを貼ってください。</h4>
+        <div>
+          <%= text_field_tag(:target_url, "", :placeholder =>"http://~", class: "form-control") %>
+        </div>
       </div>
-    </div>
-    <%= submit_tag("submit", :class => "btn btn-primary btn-md", :style => "margin-top: 1em;") %>
-<% end %>
+      <br />
+      <%= button_tag class: "btn btn-default" do %>
+      送信&nbsp;<span class="glyphicon glyphicon-envelope"></span>
+      <% end %>
+    <% end %>
+  </div>
+</div>
