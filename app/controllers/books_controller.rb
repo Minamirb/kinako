@@ -9,6 +9,7 @@ class BooksController < ApplicationController
     # TODO 失敗したときの例外処理を追加する
     # TODO URL(target_url)にバリデーションをかける
     Kindle::Mail2MyKindle.send(current_user.email, params[:target_url])
-    @result = "Send " +  params[:target_url] + " to " + current_user.email
+    @result_url   = params[:target_url]
+    @result_email = current_user.email
   end
 end

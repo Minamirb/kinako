@@ -1,3 +1,16 @@
-<h1>Books#create</h1>
-<p><%= @result %></p>
-<%= link_to 'Back', new_book_path %>
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3>
+      以下のページを&nbsp;<%= @result_email %>&nbsp;へ送信しました
+      <span class="glyphicon glyphicon-thumbs-up"></span>
+      <br />
+      結果はMy Kindleページで確認してください。
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <h4><%= @result_url %></h4>
+    <br />
+    <%= link_to '戻る', new_book_path, class: "btn btn-default" %>
+  </div>
+</div>
