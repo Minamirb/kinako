@@ -16,5 +16,7 @@
   <br>
   <%= f.text_field :kidlemail, :class => "form-control", :placeholder => "kindlemail", :autofocus => true %>
   <br>
-  <%= f.submit :class => "btn btn-primary btn-xs" %>    
+  <%= f.submit :class => "btn btn-primary btn-xs" %>
+  <%= link_to 'Cancel', user_path(current_user), :class => "btn btn-danger btn-xs" %>
+  <!--user_path(current_user)-->
 <% end %>

@@ -1,4 +1,4 @@
-<h1>User info</h1>
+<h1>User setting</h1>
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Name:</strong>
@@ -12,8 +12,7 @@
   <strong>Kidlemail:</strong>
   <%= @user.kidlemail %>
 </p>
+<%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-primary btn-xs" %>
 <hr>
 Back to
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'List', users_path %> |
 <%= link_to 'Home', new_book_path %>

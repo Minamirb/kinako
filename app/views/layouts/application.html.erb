@@ -23,7 +23,7 @@
       </div>
       <div class="navbar-collapse collapse pull-right">
         <% if current_user %>
-          <%= link_to 'User settings', users_path(current_user), :class => "btn btn-success btn-sm", :style => "margin: 0.75em 0 0.25em;" %>
+          <%= link_to 'User setting', user_path(current_user), :class => "btn btn-success btn-sm", :style => "margin: 0.75em 0 0.25em;" %>
           <%= link_to 'logout', destroy_user_session_path, method: :delete, :class => "btn btn-success btn-sm", :style => "margin: 0.75em 0 0.25em;" %>
         <% end %>
       </div>      
